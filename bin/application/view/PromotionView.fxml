@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="126.0" prefWidth="319.0" style="-fx-background-color: gray; -fx-border-color: black;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PromotionController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="34.0" prefWidth="311.0" text="Choose a piece to be promoted to:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="40.0" layoutY="40.0" onMouseClicked="#promoteToRook" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pieces/white_rook.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="105.0" layoutY="40.0" onMouseClicked="#promoteToKnight" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pieces/white_knight.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="170.0" layoutY="40.0" onMouseClicked="#promoteToBishop" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pieces/white_bishop.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="235.0" layoutY="40.0" onMouseClicked="#promoteToQueen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pieces/white_queen.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="85.0" onMouseClicked="#promoteToRook" text="Rook" />
+      <Label layoutX="111.0" layoutY="85.0" text="Knight" />
+      <Label layoutX="171.0" layoutY="85.0" text="Bishop" />
+      <Label layoutX="239.0" layoutY="85.0" text="Queen" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TesterController">
+   <children>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="582.0" layoutY="559.0" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: black;" text="Quit Game" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="14.0" />
+         </font>
+      </Button>
+      <HBox alignment="CENTER" layoutX="212.0" layoutY="45.0" spacing="25.0">
+         <children>
+            <Circle fx:id="circle1" fill="#f5f5f5" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="playerLabel" alignment="CENTER" contentDisplay="CENTER" text="White'sTurn" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Circle fx:id="circle2" fill="#f5f5f5" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </HBox>
+      <Button fx:id="nextPlayerButton" layoutX="251.0" layoutY="531.0" mnemonicParsing="false" onAction="#handleNextPlayerButton" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: black;" text="N E X T  P L A Y E R" textFill="#686868">
+         <font>
+            <Font name="Agency FB Bold" size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="pane" layoutX="151.0" layoutY="100.0">
+         <children>
+            <ImageView fx:id="board" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../board.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="d0" fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="3.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d1" fitHeight="45.0" fitWidth="45.0" layoutX="53.0" layoutY="3.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d2" fitHeight="45.0" fitWidth="45.0" layoutX="103.0" layoutY="3.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d3" fitHeight="45.0" fitWidth="45.0" layoutX="153.0" layoutY="3.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d4" fitHeight="45.0" fitWidth="45.0" layoutX="203.0" layoutY="3.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d5" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="3.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d6" fitHeight="45.0" fitWidth="45.0" layoutX="303.0" layoutY="3.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d7" fitHeight="45.0" fitWidth="45.0" layoutX="353.0" layoutY="3.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d8" fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="53.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d9" fitHeight="45.0" fitWidth="45.0" layoutX="53.0" layoutY="53.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d10" fitHeight="45.0" fitWidth="45.0" layoutX="103.0" layoutY="53.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d11" fitHeight="45.0" fitWidth="45.0" layoutX="153.0" layoutY="53.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d12" fitHeight="45.0" fitWidth="45.0" layoutX="203.0" layoutY="53.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d13" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="53.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d14" fitHeight="45.0" fitWidth="45.0" layoutX="303.0" layoutY="53.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d15" fitHeight="45.0" fitWidth="45.0" layoutX="353.0" layoutY="53.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d16" fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="103.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d17" fitHeight="45.0" fitWidth="45.0" layoutX="53.0" layoutY="103.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d18" fitHeight="45.0" fitWidth="45.0" layoutX="103.0" layoutY="103.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d19" fitHeight="45.0" fitWidth="45.0" layoutX="153.0" layoutY="103.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d20" fitHeight="45.0" fitWidth="45.0" layoutX="203.0" layoutY="103.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d21" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="103.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d22" fitHeight="45.0" fitWidth="45.0" layoutX="303.0" layoutY="103.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d23" fitHeight="45.0" fitWidth="45.0" layoutX="353.0" layoutY="103.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d24" fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="153.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d25" fitHeight="45.0" fitWidth="45.0" layoutX="53.0" layoutY="153.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d26" fitHeight="45.0" fitWidth="45.0" layoutX="103.0" layoutY="153.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d27" fitHeight="45.0" fitWidth="45.0" layoutX="153.0" layoutY="153.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d28" fitHeight="45.0" fitWidth="45.0" layoutX="203.0" layoutY="153.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d29" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="153.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d30" fitHeight="45.0" fitWidth="45.0" layoutX="303.0" layoutY="153.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d31" fitHeight="45.0" fitWidth="45.0" layoutX="353.0" layoutY="153.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d32" fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="203.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d33" fitHeight="45.0" fitWidth="45.0" layoutX="53.0" layoutY="203.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d34" fitHeight="45.0" fitWidth="45.0" layoutX="103.0" layoutY="203.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d35" fitHeight="45.0" fitWidth="45.0" layoutX="153.0" layoutY="203.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d36" fitHeight="45.0" fitWidth="45.0" layoutX="203.0" layoutY="203.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d37" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="203.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d38" fitHeight="45.0" fitWidth="45.0" layoutX="303.0" layoutY="203.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d39" fitHeight="45.0" fitWidth="45.0" layoutX="353.0" layoutY="203.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d40" fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="253.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d41" fitHeight="45.0" fitWidth="45.0" layoutX="53.0" layoutY="253.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d42" fitHeight="45.0" fitWidth="45.0" layoutX="103.0" layoutY="253.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d43" fitHeight="45.0" fitWidth="45.0" layoutX="153.0" layoutY="253.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d44" fitHeight="45.0" fitWidth="45.0" layoutX="203.0" layoutY="253.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d45" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="253.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d46" fitHeight="45.0" fitWidth="45.0" layoutX="303.0" layoutY="253.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d47" fitHeight="45.0" fitWidth="45.0" layoutX="353.0" layoutY="253.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d48" fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="303.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d49" fitHeight="45.0" fitWidth="45.0" layoutX="53.0" layoutY="303.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d50" fitHeight="45.0" fitWidth="45.0" layoutX="103.0" layoutY="303.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d51" fitHeight="45.0" fitWidth="45.0" layoutX="153.0" layoutY="303.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d52" fitHeight="45.0" fitWidth="45.0" layoutX="203.0" layoutY="303.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d53" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="303.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d54" fitHeight="45.0" fitWidth="45.0" layoutX="303.0" layoutY="303.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d55" fitHeight="45.0" fitWidth="45.0" layoutX="353.0" layoutY="303.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d56" fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="353.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d57" fitHeight="45.0" fitWidth="45.0" layoutX="53.0" layoutY="353.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d58" fitHeight="45.0" fitWidth="45.0" layoutX="103.0" layoutY="353.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d59" fitHeight="45.0" fitWidth="45.0" layoutX="153.0" layoutY="353.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d60" fitHeight="45.0" fitWidth="45.0" layoutX="203.0" layoutY="353.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d61" fitHeight="45.0" fitWidth="45.0" layoutX="253.0" layoutY="353.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d62" fitHeight="45.0" fitWidth="45.0" layoutX="303.0" layoutY="353.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="d63" fitHeight="45.0" fitWidth="45.0" layoutX="353.0" layoutY="353.0" onMouseClicked="#selectDestination" onMouseEntered="#isMoveValid" onMouseExited="#onMouseExited" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="black_rook_1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_rook.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_knight_2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_knight.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_bishop_2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_bishop.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_king" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_king.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_pawn_2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_pawn_4" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_pawn_6" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_pawn_8" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_rook_2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_rook.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_knight_1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_knight.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_bishop_1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_bishop.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_queen" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_queen.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_pawn_1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_pawn_3" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_pawn_5" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="black_pawn_7" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/black_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_rook_1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_rook.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_knight_1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_knight.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_bishop_1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_bishop.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_queen" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_queen.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_pawn_3" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_pawn_5" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_pawn_7" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_rook_2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_rook.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_knight_2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_knight.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_bishop_2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_bishop.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_king" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_king.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_pawn_2" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_pawn_4" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_pawn_6" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_pawn_8" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_pawn.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="white_pawn_1" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pieces/white_pawn.png" />
+               </image>
+            </ImageView>
+            <Circle fx:id="red" disable="true" fill="RED" layoutX="40.0" radius="18.0" strokeType="INSIDE" visible="false">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#ff000000" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Circle>
+            <Circle fx:id="green" disable="true" fill="#59c95e" layoutX="51.0" radius="18.0" strokeType="INSIDE" visible="false">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#00ff5100" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Circle>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="50.0" layoutY="100.0" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: black;" />
+      <Pane layoutX="560.0" layoutY="100.0" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: white;" />
+      <ImageView fx:id="e16b" fitHeight="45.0" fitWidth="45.0" layoutX="50.0" layoutY="145.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e15b" fitHeight="45.0" fitWidth="45.0" layoutX="50.0" layoutY="190.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e14b" fitHeight="45.0" fitWidth="45.0" layoutX="50.0" layoutY="235.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e13b" fitHeight="45.0" fitWidth="45.0" layoutX="50.0" layoutY="280.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e12b" fitHeight="45.0" fitWidth="45.0" layoutX="50.0" layoutY="325.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e11b" fitHeight="45.0" fitWidth="45.0" layoutX="50.0" layoutY="370.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e10b" fitHeight="45.0" fitWidth="45.0" layoutX="50.0" layoutY="415.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e9b" fitHeight="45.0" fitWidth="45.0" layoutX="50.0" layoutY="460.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e8b" fitHeight="45.0" fitWidth="45.0" layoutX="95.0" layoutY="145.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e7b" fitHeight="45.0" fitWidth="45.0" layoutX="95.0" layoutY="190.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e6b" fitHeight="45.0" fitWidth="45.0" layoutX="95.0" layoutY="235.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e5b" fitHeight="45.0" fitWidth="45.0" layoutX="95.0" layoutY="280.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e4b" fitHeight="45.0" fitWidth="45.0" layoutX="95.0" layoutY="325.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e3b" fitHeight="45.0" fitWidth="45.0" layoutX="95.0" layoutY="370.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e2b" fitHeight="45.0" fitWidth="45.0" layoutX="95.0" layoutY="415.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e1b" fitHeight="45.0" fitWidth="45.0" layoutX="95.0" layoutY="460.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e8w" fitHeight="45.0" fitWidth="45.0" layoutX="560.0" layoutY="145.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e7w" fitHeight="45.0" fitWidth="45.0" layoutX="560.0" layoutY="190.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e6w" fitHeight="45.0" fitWidth="45.0" layoutX="560.0" layoutY="235.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e5w" fitHeight="45.0" fitWidth="45.0" layoutX="560.0" layoutY="280.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e4w" fitHeight="45.0" fitWidth="45.0" layoutX="560.0" layoutY="325.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e3w" fitHeight="45.0" fitWidth="45.0" layoutX="560.0" layoutY="370.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e2w" fitHeight="45.0" fitWidth="45.0" layoutX="560.0" layoutY="415.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e1w" fitHeight="45.0" fitWidth="45.0" layoutX="560.0" layoutY="460.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e16w" fitHeight="45.0" fitWidth="45.0" layoutX="605.0" layoutY="145.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e15w" fitHeight="45.0" fitWidth="45.0" layoutX="605.0" layoutY="190.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e14w" fitHeight="45.0" fitWidth="45.0" layoutX="605.0" layoutY="235.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e13w" fitHeight="45.0" fitWidth="45.0" layoutX="605.0" layoutY="280.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e12w" fitHeight="45.0" fitWidth="45.0" layoutX="605.0" layoutY="325.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e11w" fitHeight="45.0" fitWidth="45.0" layoutX="605.0" layoutY="370.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e10w" fitHeight="45.0" fitWidth="45.0" layoutX="605.0" layoutY="415.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="e9w" fitHeight="45.0" fitWidth="45.0" layoutX="605.0" layoutY="460.0" onMouseClicked="#selectPiece" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
